@@ -12,7 +12,7 @@ lists.pop(0)
 large = sum(lists[0])
 for k in lists:
     if sum(k)>large:
-        print('in last loop')
+        # print('in last loop')
         large = sum(k)
 print(large)
 
