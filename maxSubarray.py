@@ -7,12 +7,10 @@ lists = [[]]
 for i in range(len(nums)+1):
     for j in range(i):
         lists.append(nums[j:i])
-print(lists)
 lists.pop(0)
 large = sum(lists[0])
 for k in lists:
     if sum(k)>large:
-        # print('in last loop')
         large = sum(k)
 print(large)
 
