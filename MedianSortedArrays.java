@@ -1,24 +1,24 @@
 import java.util.Arrays;
 
-public class MedianSortedArrays {
+public class MedianSortedArrays{
     public static void main(String args[]){
-        int arr1[] = {1,2};
-        int arr2[] = {3,4};
-        int arr3[] = new int[arr1.length+arr2.length];
-        int arr1Length = arr1.length;
-        int arr2Length = arr2.length;
-        for(int i=0;i<arr1Length;i++){
-            arr3[i] = arr1[i];
-        }
-        for(int i=0;i<arr2Length;i++){
-            arr3[arr1Length + i] = arr2[i];
-        }
-        int n = arr3.length;
-        Arrays.sort(arr3);
+        int[] nums1 = {1,3};
+        int[] nums2 = {2,7};
+        float res = 0;
+        int n;
+        int[] nums3 = new int[nums1.length+nums2.length];
+        int n1Len = nums1.length;
+        int n2Len = nums2.length;
+        for(int i=0;i<n1Len;i++)
+            nums3[i] = nums1[i];
+        for(int i=0;i<n2Len;i++)
+            nums3[n1Len+i] = nums2[i];
+        Arrays.sort(nums3);
+        n = nums3.length;
         if(n%2!=0)
-            System.out.println(arr3[n/2]);
-        else{
-            System.out.println((double)(arr3[(n - 1) / 2] + arr3[n / 2]) / 2.0);
-        }
+            System.out.println(nums3[n/2]);
+        else
+            res = nums3[(n-1)/2]+nums3[n/2];
+            System.out.println(res/2);
     }
 }
