@@ -15,9 +15,8 @@
 
 import statistics
 
-arr1 = [1,3]
-arr2 = [74,1,26,60]
+arr1 = [1,2]
+arr2 = [4,3]
 
 arr1 = arr1 + arr2
-sorted(arr2)
 print(statistics.median(arr1))
