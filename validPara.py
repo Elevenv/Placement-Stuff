@@ -11,6 +11,7 @@ def paraCheck(s):
            s = s.replace ( '[]' , '' )  
        else :  
            return not s
+        #    return False
 
 s = "(){}[]"
 print(paraCheck(s))
