@@ -23,6 +23,7 @@ class Queue:
         print(self.queue)
 
 q = Queue()
+
 q.enqueue(1)
 q.enqueue(2)
 q.enqueue(3)
