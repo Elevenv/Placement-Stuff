@@ -15,6 +15,7 @@ class LinkedList:
         else:
             self.last_node.next = Node(item)
             self.last_node = self.last_node.next
+
     def Delete(self,item):
         temp = self.head
 
@@ -38,6 +39,16 @@ class LinkedList:
             print(self.head.item,end=' ')
             self.head = self.head.next
         return
+
+    # def ReverseLinkedList(self):
+    #     prev,curr = None,self.head
+    #     while curr:
+    #         temp = curr.next
+    #         curr.next = prev
+    #         prev = curr
+    #         curr = temp
+    #     return prev
+
 if __name__=='__main__':
     ll = LinkedList()
     n = int(input('Enter n: '))
@@ -45,8 +56,7 @@ if __name__=='__main__':
         item = int(input('Enter item: '))
         ll.Append(item)
     # ll.Display()
-    ll.Delete(3)
+    # ll.Delete(3)
     ll.Display()
-    print('\n')
 
 
