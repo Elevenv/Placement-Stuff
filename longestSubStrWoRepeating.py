@@ -1,21 +1,39 @@
 # https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
-s = "abcabcbb"
+# s = "abcabcbb"
 # s = "pwwkew"
-# s = "bbbbb"
-# s= " "
+s = "aab"
+# s= "dvdf"
 
+i = 0
+j = 0
+l = []
+sub = ''
 
-ans = []
-for i in range(len(s)):
-    l = ''
-    for j in range(i,len(s)):
-        if s[j] not in l:
-            l+=s[j]
-        else:
-            ans.append(len(l))
-            break
+while i<len(s) and j<len(s):
+    if s[j] not in sub:
+        sub+=s[j]
+        j+=1
     else:
-        ans.append(len(l))
+        l.append(len(sub))
+        sub = ''
+        i+=1
+        j = i
+l.append(len(sub))
+print(l)
 
-print(ans,max(ans))
+# OR
+
+# ans = []
+# for i in range(len(s)):
+#     l = ''
+#     for j in range(i,len(s)):
+#         if s[j] not in l:
+#             l+=s[j]
+#         else:
+#             ans.append(len(l))
+#             break
+#     else:
+#         ans.append(len(l))
+
+# print(ans,max(ans))
