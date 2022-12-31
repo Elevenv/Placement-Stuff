@@ -12,3 +12,16 @@ def PascalTriangle(numRows):
 
 numRows = int(input())
 print(PascalTriangle(numRows))
+
+
+
+# DP Solution
+
+# c = [[1]*i for i in range(1,6)]
+# for i in range(5):
+#     for j in range(i):
+#         if i==j or j==0:
+#             c[i][j] = 1
+#         else:
+#             c[i][j] = c[i-1][j-1] + c[i-1][j]
+# print(c)
